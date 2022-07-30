@@ -8,10 +8,13 @@ const ShortnerInputWrapper = styled.div`
     width: 85vw;
     display: block;
     margin: auto;
+    margin-top: -4.5rem;
+    position: relative;
 
-    @media only screen and (max-width: 375px){
+    @media only screen and (max-width: 425px){
         width: 90vw;
         padding: 1.6rem 0rem;
+        margin-top: 0rem;
     }
 `;
 
@@ -30,7 +33,7 @@ const CustomInput = styled.input`
     border: none;
     width: 60vw;
 
-    @media only screen and (max-width: 375px){
+    @media only screen and (max-width: 425px){
         width: 80vw;
         font-size: 0.7rem;
         display: block;
@@ -58,7 +61,7 @@ const CustomButton = styled.button`
     background-color: ${({ theme }) => theme.colors.primary.cyan};
     font-family: ${({ theme }) => theme.fonts.main};
 
-    @media only screen and (max-width: 375px){
+    @media only screen and (max-width: 425px){
         width: 80vw;
         font-size: 0.8rem;
         display: block;

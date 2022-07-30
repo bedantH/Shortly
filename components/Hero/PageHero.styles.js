@@ -18,7 +18,7 @@ const HeroTitle = styled.div`
         color: ${({ theme }) => theme.colors.neutral.veryDarkViolet};
         font-weight: ${({ theme }) => theme.fontWeights.font7}; 
     
-        @media only screen and (max-width: 375px){
+        @media only screen and (max-width: 425px){
             font-size: 2.5rem;
         }
     }
@@ -29,7 +29,7 @@ const HeroImage = styled.div`
     display: block;
     margin: auto;
 
-    @media only screen and (max-width: 375px){
+    @media only screen and (max-width: 425px){
         margin-top: 1rem;
     }
 `;

@@ -9,7 +9,7 @@ const DisplayWrapper = styled.section`
     margin: 1.4rem auto;
     border-radius: 5px;
 
-    @media only screen and (max-width: 375px){
+    @media only screen and (max-width: 425px){
         width: 90vw;
     }
 `;
@@ -26,7 +26,7 @@ const DisplayContainer = styled.div`
         display: none;
     }
 
-    @media only screen and (max-width: 375px){
+    @media only screen and (max-width: 425px){
         flex-direction: column;
         padding: 0rem;
 
@@ -42,7 +42,7 @@ const NormalLink = styled.p`
     font-weight: ${({ theme }) => theme.fontWeights.font7};
     color: ${({ theme }) => theme.colors.neutral.veryDarkViolet};
 
-    @media only screen and (max-width: 375px){
+    @media only screen and (max-width: 425px){
         font-size: 0.9rem;
         overflow: hidden;
         width: 78vw;
@@ -54,7 +54,7 @@ const NormalLink = styled.p`
 `;
 
 const LeftSideContainer = styled.div`
-    @media only screen and (max-width: 375px){
+    @media only screen and (max-width: 425px){
         width: 78vw;
         text-align: left;
         margin: 0rem 1rem 1rem;
@@ -65,7 +65,7 @@ const ShortenURL = styled.a`
     font-weight: ${({ theme }) => theme.fontWeights.font5};
     color: ${({ theme }) => theme.colors.primary.cyan};
     
-    @media only screen and (max-width: 375px){
+    @media only screen and (max-width: 425px){
         display: block;
         margin: 0.7rem 0rem;
     }
@@ -82,7 +82,7 @@ const CopyButton = styled.button`
     margin-left: 2rem;
     background-color: ${({ theme }) => theme.colors.primary.cyan};
 
-    @media only screen and (max-width: 375px){
+    @media only screen and (max-width: 425px){
         width: 100%;
         margin-left: 0rem;
     }

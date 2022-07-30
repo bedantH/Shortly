@@ -1,10 +1,21 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { ResourceContext } from '../../providers/ResourceContext';
 
-import { Header as CustomHeader, HamburgerMenu, HeaderTitle, NavigationLink, Nav, NavigationWrapper, NavigationListItem } from './Header.styles';
+import { Header as CustomHeader, HamburgerMenu, HeaderTitle, NavigationLink, Nav, NavigationWrapper, NavigationListItem, HamburgMenuMain, CloseIcon } from './Header.styles';
 
 const Header = () => {
     const properties = useContext(ResourceContext);
+    const [isShowing, setShowing] = useState(false);
+
+    const handleClick = () => {
+        setShowing(true);
+        console.log("open");
+    }
+
+    const handleClose = () => {
+        setShowing(false);
+        console.log("close");
+    }
 
     return (
         <CustomHeader>
@@ -27,11 +38,19 @@ const Header = () => {
                         </NavigationLink>
                     </NavigationListItem>
                 </NavigationWrapper>
-                <HamburgerMenu>
+                <HamburgerMenu onClick={handleClick}>
                     <div className='first'></div>
                     <div className='second'></div>
                     <div className='third'></div>
                 </HamburgerMenu>
+                <HamburgMenuMain className={isShowing ? 'show' : 'hidden'}>
+                    <CloseIcon onClick={handleClose}>+</CloseIcon>
+                    <ul>
+                        <li>{properties.features}</li>
+                        <li>{properties.pricing}</li>
+                        <li>{properties.resources}</li>
+                    </ul>
+                </HamburgMenuMain>
             </Nav>
         </CustomHeader>
     )

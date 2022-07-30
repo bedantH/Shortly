@@ -59,7 +59,7 @@ const HamburgerMenu = styled.div`
     div{
         width: 1.8rem;
         height: 3px;
-        background-color: ${({ theme }) => theme.colors.neutral.grayishViolet};
+        background-color: ${({ theme }) => theme.colors.neutral.gray};
         margin: 0.5rem 0rem;
     }
 
@@ -70,4 +70,46 @@ const HamburgerMenu = styled.div`
     }
 `;
 
-export { Header, HamburgerMenu, HeaderTitle, Nav, NavigationLink, NavigationWrapper, NavigationListItem }
+const HamburgMenuMain = styled.section`
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #F0F1F6;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: all 1.3s;
+
+    ul{
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+
+        li{
+            font-size: 1.3rem;
+            margin: 1rem;
+            list-style: none;
+            font-weight: 700;
+        }
+    }
+
+    &.hidden{
+        transform: translateX(100%);
+    }
+
+    &.show {
+        transform: translateX(0%);
+    }
+`;
+
+const CloseIcon = styled.span`
+    display: block;
+    width: fit-content;
+    transform: rotate(45deg);
+    font-size: 3rem;
+    margin: 0.3rem 1rem 0rem auto;
+`;
+
+export { Header, HamburgerMenu, HeaderTitle, Nav, NavigationLink, NavigationWrapper, NavigationListItem, HamburgMenuMain, CloseIcon }

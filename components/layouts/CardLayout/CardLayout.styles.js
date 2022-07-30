@@ -18,7 +18,7 @@ const CustomCardLayout = styled.ul`
         gap: 2rem;
     }
 
-    @media only screen and (max-width: 375px){
+    @media only screen and (max-width: 425px){
         margin-top: 4rem;
     }
 `;
@@ -35,7 +35,7 @@ const TimeLine = styled.div`
     @media ${({ theme }) => theme.mdq.sm}{
         top: 0;
         width: 0.8rem;
-        height: 100vh;
+        height: 90vh;
         transform: rotate(180deg) translate(50%);
     }
 `;
@@ -51,7 +51,7 @@ const SectionTitle = styled.div`
     h3{
         font-size: 2rem;
         
-        @media only screen and (max-width: 375px){
+        @media only screen and (max-width: 425px){
             font-size: 1.4rem;
         }
     }
@@ -62,13 +62,13 @@ const SectionTitle = styled.div`
         margin: auto;
         color: #9e9aa7;
 
-        @media only screen and (max-width: 375px){
+        @media only screen and (max-width: 425px){
             font-size: 0.8rem;
             max-width: 70%;
         }
     }
 
-    @media only screen and (max-width: 375px){
+    @media only screen and (max-width: 425px){
         margin-bottom: 2rem;
     }
 `;
