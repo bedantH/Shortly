@@ -2,11 +2,12 @@ import styled from "@emotion/styled";
 
 const Header = styled.header`
     padding: 1.7rem 8rem 0rem 8rem;
-    width: fit-content;
+    width: 100vw;
+    height: 20vh;
+    background-color: #fff;
 
     @media ${({ theme }) => theme.mdq.sm} {
         padding: 1.7rem 0rem 0rem 1rem;
-        width: 94vw;
     }
 `;
 
@@ -65,6 +66,7 @@ const HamburgerMenu = styled.div`
     display: none;
     @media ${({ theme }) => theme.mdq.sm} {
         display: block;
+        margin-right: 1.1rem;
     }
 `;
 

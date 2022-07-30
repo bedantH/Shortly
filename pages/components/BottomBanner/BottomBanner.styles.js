@@ -4,7 +4,6 @@ const BannerWrapper = styled.section`
     margin-top: 2rem;
     background-image: url('/Meteor.svg');
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-position: center;
     padding: 3rem;
 `;
