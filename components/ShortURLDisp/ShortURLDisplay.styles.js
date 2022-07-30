@@ -72,6 +72,7 @@ const ShortenURL = styled.a`
 `;
 
 const CopyButton = styled.button`
+    cursor: pointer;
     font-family: ${({ theme }) => theme.fonts.main};
     font-weight: ${({ theme }) => theme.fontWeights.font5};
     padding: 0.5rem 1.5rem;
@@ -85,6 +86,10 @@ const CopyButton = styled.button`
     @media only screen and (max-width: 425px){
         width: 100%;
         margin-left: 0rem;
+    }
+
+    &.clicked{
+        background-color: ${({ theme }) => theme.colors.primary.darkViolet};
     }
 `;
 

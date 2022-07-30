@@ -1,6 +1,8 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { ResourceContext } from '../../providers/ResourceContext';
 import { UrlContext } from '../layouts/URLShorten/URLShortenLayout';
+
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import {
     DisplayWrapper,
@@ -13,6 +15,7 @@ import {
 
 const ShortURLDisplay = ({ uri }) => {
     const properties = useContext(ResourceContext);
+    const [copied, setCopied] = useState(false);
 
     return (
         <DisplayWrapper>
@@ -23,9 +26,11 @@ const ShortURLDisplay = ({ uri }) => {
                 <hr />
                 <LeftSideContainer>
                     <ShortenURL href={uri.result.short_link}>{uri.result.short_link}</ShortenURL>
-                    <CopyButton>
-                        {properties.buttons.copy}
-                    </CopyButton>
+                    <CopyToClipboard text={uri.result.short_link}>
+                        <CopyButton onClick={() => { setCopied(!copied) }} className={copied && 'clicked'}>
+                            {copied ? properties.buttons.copied : properties.buttons.copy}
+                        </CopyButton>
+                    </CopyToClipboard>
                 </LeftSideContainer>
             </DisplayContainer>
         </DisplayWrapper>
