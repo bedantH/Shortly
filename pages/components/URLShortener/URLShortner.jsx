@@ -1,8 +1,5 @@
-import Image from 'next/image'
 import React, { useContext, useState } from 'react'
 import { ResourceContext } from '../../../providers/ResourceContext';
-import { getShorty } from '../../service';
-import axios from "axios";
 import {
     ShortnerInputWrapper,
     InputContainer,
