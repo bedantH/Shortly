@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react'
-import { ResourceContext } from '../../../providers/ResourceContext';
+import { ResourceContext } from '../../providers/ResourceContext';
 
 import { Header as CustomHeader, HamburgerMenu, HeaderTitle, NavigationLink, Nav, NavigationWrapper, NavigationListItem } from './Header.styles';
 

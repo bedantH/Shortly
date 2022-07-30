@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { ResourceContext } from '../../../providers/ResourceContext'
+import { ResourceContext } from '../../providers/ResourceContext'
 import Image from 'next/image';
 
 import { HeroWrapper, HeroTitle, HeroImage } from './PageHero.styles';

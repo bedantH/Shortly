@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react'
-import { ResourceContext } from '../../../providers/ResourceContext';
+import { ResourceContext } from '../../providers/ResourceContext';
 import { UrlContext } from '../layouts/URLShorten/URLShortenLayout';
 
 import {

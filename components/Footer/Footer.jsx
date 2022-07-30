@@ -17,7 +17,7 @@ import {
   NavListItem,
   NavListItemLink
 } from './Footer.styles';
-import { ResourceContext } from '../../../providers/ResourceContext';
+import { ResourceContext } from '../../providers/ResourceContext';
 
 const Footer = () => {
   const properties = useContext(ResourceContext);

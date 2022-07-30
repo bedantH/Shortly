@@ -7,7 +7,7 @@ import {
     CustomInput,
     CustomButton
 } from '../../URLShortener/URLShortner.styles';
-import { ResourceContext } from '../../../../providers/ResourceContext';
+import { ResourceContext } from '../../../providers/ResourceContext';
 
 
 const URLShortenLayout = () => {
